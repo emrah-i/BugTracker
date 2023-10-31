@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export const content = [
-  "./src/**/*.{js,jsx,ts,tsx}",
-];
-export const theme = {
-  extend: {},
+module.exports = {
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        "main-color": "var(--main-color)",
+        "sec-color": "var(--sec-color)",
+        "third-color": "var(--third-color)"
+      },
+    },
+  },
+  plugins: [],
 };
-export const plugins = [];
-
