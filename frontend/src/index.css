@@ -18,6 +18,12 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.custom-transition {
+  transition: all .5s ease;
+  -webkit-transition: all .25s;
+  -moz-transition: all 0.25s;
+}
+
 .custom-shadow {
   box-shadow: -1.65rem 0 2rem .5rem black;
 }
