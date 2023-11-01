@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "~react-vis/dist/style";
 
 :root {
   font-size: 20px;
@@ -19,13 +18,11 @@ body {
 }
 
 .custom-transition {
-  transition: all .5s ease;
-  -webkit-transition: all .25s;
-  -moz-transition: all 0.25s;
+  transition: all .4s ease;
 }
 
 .custom-shadow {
-  box-shadow: -1.65rem 0 2rem .5rem black;
+  box-shadow: -.9rem 0 1rem .3rem black;
 }
 
 .nav-link {

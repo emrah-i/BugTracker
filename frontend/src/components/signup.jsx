@@ -2,7 +2,7 @@
 function SignUp() {
     return(<div className="flex flex-col justify-center items-center h-screen">
                 <div className="flex items-center gap-5 text-sec-color my-5 mb-10 text-5xl">
-                    <i className="fa-solid fa-bug"></i> <p className="font-semibold">Bug Tracker</p>
+                    <i className="fa-solid fa-spider"></i> <p className="font-semibold">Bug Tracker</p>
                 </div>
                 <div className="flex flex-col justify-between items-center rounded-lg shadow-2xl w-1/3 h-4/6 text-main-color bg-sec-color p-5">
                     <form className="w-3/5 h-full flex flex-col justify-center gap-3 items-center">
