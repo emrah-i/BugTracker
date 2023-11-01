@@ -6,7 +6,7 @@
   font-size: 20px;
   --main-color: white;
   --sec-color: #7371FC;
-  --third-color: #CDC1FF;
+  --third-color: #BEADFF;
   --fourth-color: #E5D9F2;
   --fifth-color: #F5EFFF;
 }
@@ -23,6 +23,23 @@ body {
 
 .custom-shadow {
   box-shadow: -.9rem 0 1rem .3rem black;
+}
+
+.table-heading td {
+  text-align: left;
+  @apply p-3 font-medium;
+}
+
+.table-rows td {
+  @apply p-3;
+}
+
+.table-row-parent {
+  @apply table-rows text-xs border-gray-200 border-solid border-t-2 cursor-pointer w-full hover:bg-gray-100;
+}
+
+.dashboard-chart {
+  @apply flex flex-col items-center justify-center bg-white rounded-lg p-3 shadow-md;
 }
 
 .nav-link {

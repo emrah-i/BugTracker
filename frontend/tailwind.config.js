@@ -8,7 +8,7 @@ module.exports = {
         "sec-color": "var(--sec-color)",
         "third-color": "var(--third-color)",
         "fourth-color": "var(--fourth-color)",
-        "fifth-color": "var(--fifth-color)"
+        "fifth-color": "var(--fifth-color)",
       },
     },
   },
