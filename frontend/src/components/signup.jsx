@@ -1,6 +1,6 @@
 
 function SignUp() {
-    return(<div className="flex flex-col justify-center items-center h-screen bg-main-color">
+    return(<div className="flex flex-col justify-center items-center h-screen">
                 <div className="flex items-center gap-5 text-sec-color my-5 mb-10 text-5xl">
                     <i className="fa-solid fa-bug"></i> <p className="font-semibold">Bug Tracker</p>
                 </div>

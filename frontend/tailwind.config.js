@@ -6,7 +6,9 @@ module.exports = {
       colors: {
         "main-color": "var(--main-color)",
         "sec-color": "var(--sec-color)",
-        "third-color": "var(--third-color)"
+        "third-color": "var(--third-color)",
+        "fourth-color": "var(--fourth-color)",
+        "fifth-color": "var(--fifth-color)"
       },
     },
   },

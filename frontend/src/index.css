@@ -1,17 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~react-vis/dist/style";
 
 :root {
   font-size: 20px;
   --main-color: white;
   --sec-color: #7371FC;
-  --third-color: #504FB0;
+  --third-color: #CDC1FF;
+  --fourth-color: #E5D9F2;
+  --fifth-color: #F5EFFF;
 }
 
 body {
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.643);
+  background-color: white;
   font-family: 'Ubuntu', sans-serif;
 }
 
+.custom-shadow {
+  box-shadow: -1.65rem 0 2rem .5rem black;
+}
+
+.nav-link {
+  @apply flex gap-5 items-center w-full;
+}
+
+.nav-icon {
+  @apply flex justify-center w-5;
+}
