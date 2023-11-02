@@ -12,6 +12,7 @@ const data = [
 const data2 = [
                 { name: 'Bugs', value: 4 },
                 { name: 'Feature Requests', value: 3 },
+                { name: 'New Project', value: 2 },
                 { name: 'Issues', value: 2 },
             ];
 
@@ -49,20 +50,19 @@ function Charts() {
                     <PieChart width={400} height={400}>
                         <Pie
                         data={data2}
-                        cx="25%"
-                        cy="60%"
-                        outerRadius={90}
+                        cx="50%"
+                        cy="45%"
+                        outerRadius={100}
                         dataKey="value"
-                        fontSize={12}
-                        stroke={5}
-                        label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                        fontSize={16}
+                        label={({ name, percent }) => `${(percent * 100).toFixed(0)}%`}
                         >
                         {
                             data.map((entry, index) => <Cell key={index} fill={colors[index]} />)
                         }
                         </Pie>
                         <Tooltip contentStyle={{ fontSize: '14px', borderRadius: '.5rem' }} />
-                        <Legend iconSize={16} wrapperStyle={{ fontSize: '.7rem', marginLeft: "1rem" }}align='left' verticalAlign='right' layout='vertical' />
+                        <Legend iconSize={16} wrapperStyle={{ fontSize: '.7rem', marginLeft: "1rem", marginBottom: "2rem" }} align='center' verticalAlign='bottom' layout='horizontal' />
                     </PieChart>
                 </div>
                 <div className='dashboard-chart'>
@@ -72,11 +72,11 @@ function Charts() {
                         data={data3}
                         dataKey="value"
                         nameKey="name"
-                        cx="40%"
-                        cy="60%"
-                        innerRadius={55}
-                        outerRadius={90}
-                        fontSize={12}
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={60}
+                        outerRadius={100}
+                        fontSize={14}
                         fill="#8884d8"
                         label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                         >
@@ -87,7 +87,7 @@ function Charts() {
                         }
                     </Pie>
                     <Tooltip contentStyle={{ fontSize: '14px', borderRadius: '.5rem' }} />
-                    <Legend iconSize={16} wrapperStyle={{ fontSize: '.7rem', marginLeft: "1rem" }}align='left' verticalAlign='right' layout='vertical' />
+                    <Legend iconSize={16} wrapperStyle={{ fontSize: '.7rem', marginLeft: "1rem", marginTop: "1rem" }} align='center' verticalAlign='center' layout='horizontal' />
                     </PieChart>
                 </div>
             </div>)
