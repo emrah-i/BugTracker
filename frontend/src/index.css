@@ -34,6 +34,10 @@ body {
   @apply table-rows text-xs border-gray-200 border-solid border-t-2 cursor-pointer w-full hover:bg-gray-100;
 }
 
+.poke {
+  @apply absolute pointer-events-none top-2.5 -right-5 p-1 bg-black text-white text-xs flex z-20 rounded-lg shadow-md;
+}
+
 .table-row-parent.active {
   @apply bg-gray-100;
 }
