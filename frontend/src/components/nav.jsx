@@ -1,6 +1,6 @@
 
 function Nav() {
-    return(<nav className="flex flex-col items-center w-1/5 h-screen bg-third-color text-black custom-shadow py-5">
+    return(<nav className="flex flex-col items-center w-1/5 h-screen bg-third-color text-black py-5 top-0 sticky">
                 <i className="fa-solid fa-spider text-4xl mb-1"></i> 
                 <p className="font-semibold text-xl">Bug Tracker</p>
                 <div className="flex flex-col items-start gap-3 mt-10 h-full text-lg">

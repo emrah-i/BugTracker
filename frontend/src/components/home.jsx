@@ -3,9 +3,9 @@ import { Outlet } from "react-router-dom";
 import TopNav from "./topnav";
 
 function Home() {
-    return (<div className="w-screen flex">
+    return (<div className="relative w-screen flex">
               <Nav />
-              <div className="w-full flex flex-col bg-gray-100 w-screen h-screen"> 
+              <div className="flex flex-col bg-gray-100 w-screen"> 
                 <TopNav />
                 <Outlet />
               </div>

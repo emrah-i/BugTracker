@@ -22,7 +22,7 @@ function Dashboard() {
                         <tbody>
                             <tr className="table-row-parent">
                                 <td>Bug Tracker</td>
-                                <td>Bug tracking app for teams</td>
+                                <td>Bug tracking app for teams to better collaborate</td>
                                 <td className="flex flex-col">
                                     <p>Emrakh Ibragimov</p>
                                     <p>Jane Doe</p>
@@ -47,9 +47,12 @@ function Dashboard() {
                         <button type="button" className="text-sm rounded-full py-0.5 px-2 bg-gray-200"><i className="fa-solid fa-angle-right"></i></button>
                     </div>
                 </div>
-                <div className="bg-main-color shadow-md rounded-lg mb-5 mx-5 py-3 px-5">
-                    <p className="font-medium">Selected Ticket</p>
-                    
+                <div className="bg-main-color shadow-md rounded-lg mx-5 py-3 px-5">
+                    <p className="text-xl pb-3 mb-3 font-medium border-solid border-b-2 border-gray-200">Selected Ticket</p>
+                    <p className="text-sm px-3 my-2"><span className="font-semibold">Title:</span> Bug Tracker</p>
+                    <p className="text-sm px-3 my-2"><span className="font-semibold">Full Description:</span> Bug tracking app for teams to better collaborate</p>
+                    <p className="text-sm px-3 my-2"><span className="font-semibold">Contributers:</span> Emrakh Ibragimov, Jane Doe, John Doe</p>
+                    <p className="text-sm px-3 my-2"><span className="font-semibold">Date Assigned:</span> Oct 31, 2023</p>
                 </div>
                 <Charts />
             </div>)

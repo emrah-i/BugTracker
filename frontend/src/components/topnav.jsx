@@ -23,7 +23,7 @@ function TopNav() {
                 <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
              </div>
              <div className="relative">
-                <button type="button" className="flex gap-2 items-center"  onClick={expandDropdown}><i className="flex items-center pointer-events-none text-xl bg-sec-color text-black h-min rounded-full py-0.5 px-2 fa-solid fa-user"></i><i class="flex items-center pointer-events-none fa-solid fa-angle-down duration-300" ref={dropdownArrow}></i></button>
+                <button type="button" className="flex gap-2 items-center"  onClick={expandDropdown}><i className="flex items-center pointer-events-none text-xl bg-third-color text-black h-min rounded-full py-0.5 px-2 fa-solid fa-user"></i><i class="flex items-center pointer-events-none fa-solid fa-angle-down duration-300" ref={dropdownArrow}></i></button>
                 <ul className="flex flex-col justify-between items-start text-sm absolute bg-black text-white rounded p-3 right-0 list-none pointer-events-none h-0 opacity-0 duration-300" ref={dropdownMenu}>
                     <p><a href="/profile">Profile</a></p>
                     <p><a href="/notifications">Notifications</a></p>

@@ -28,7 +28,7 @@ const bugs_array = Object(data).map((element)=>{return element.Tickets})
 const max = Math.max(...bugs_array) + 1
 
 function Charts() {
-    return (<div className='flex items-center justify-evenly my-5'>
+    return (<div className='flex items-center justify-evenly mt-5 mb-10'>
                 <div className='dashboard-chart'>
                     <label>Tickets by Status</label>
                     <BarChart
