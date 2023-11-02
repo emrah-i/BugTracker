@@ -38,12 +38,28 @@ body {
   @apply bg-gray-100;
 }
 
+.selected-ticket {
+  @apply text-sm px-3 my-2;
+}
+
+.selected-ticket span {
+  @apply font-semibold;
+}
+
 .dashboard-chart {
   @apply flex flex-col items-center justify-center bg-white rounded-lg p-3 shadow-md;
 }
 
+.dashboard-box {
+  @apply flex flex-col justify-evenly h-28 bg-main-color w-1/5 text-center text-sm shadow-md rounded-lg p-3;
+}
+
 .nav-link {
-  @apply flex gap-5 items-center w-full;
+  @apply flex gap-5 items-center w-full duration-200 hover:scale-105 hover:text-white;
+}
+
+.nav-link.active {
+  @apply text-white;
 }
 
 .nav-icon {

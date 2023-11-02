@@ -4,7 +4,7 @@ function Nav() {
                 <i className="fa-solid fa-spider text-4xl mb-1"></i> 
                 <p className="font-semibold text-xl">Bug Tracker</p>
                 <div className="flex flex-col items-start gap-3 mt-10 h-full text-lg">
-                    <a className="nav-link" href="/"><i className="nav-icon fa-solid fa-house"></i> Dashboard</a>
+                    <a className="nav-link active" href="/"><i className="nav-icon fa-solid fa-house"></i> Dashboard</a>
                     <a className="nav-link" href="/users"><i className="nav-icon fa-solid fa-user-group"></i>My Team</a>
                     <a className="nav-link" href="/my-tickets"><i class="nav-icon fa-solid fa-user-tag"></i> My Tickets</a>
                     <a className="nav-link" href="/new-ticket"><i class="nav-icon fa-solid fa-ticket-simple"></i> New Ticket</a>
