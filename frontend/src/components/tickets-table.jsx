@@ -1,10 +1,10 @@
 
 function TicketsTable(props) {
 
-    const { projects } = props
+    const { projects, title, selectedTicket, setSelectedTicket } = props
 
     return (<div className="bg-main-color shadow-md rounded-lg mt-5 py-3 px-5">
-                <p className="text-xl font-semibold mb-3">Current Tickets</p>
+                <p className="text-xl font-semibold mb-3">{title}</p>
                 <table className="bg-main-color w-full">
                     <colgroup>
                         <col className="w-1/6"></col>
@@ -27,7 +27,8 @@ function TicketsTable(props) {
                     <tbody>
                         {projects.map((element, index, array)=>{
                             let parent = index === array.length - 1 ? "border-b-2" : null;
-                            return (<tr key={index} className={`table-row-parent ${parent} relative duration-300`} onMouseOver={()=>{}} >
+                            parent = element === selectedTicket ? parent + " active" : parent;
+                            return (<tr key={index} className={`table-row-parent ${parent} relative duration-300`} onClick={()=>{setSelectedTicket(projects[index])}} >
                                         <td>{element.title}</td>
                                         <td>{element.type}</td>
                                         <td>{element.status}</td>

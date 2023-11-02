@@ -37,7 +37,7 @@ function Dashboard() {
                     <div className="dashboard-box"><p className="text-4xl font-medium">2</p> <p>Your Tickets</p></div>
                     <div className="dashboard-box"><p className="text-4xl font-medium">1</p> <p>Notifications</p></div>
                 </div>
-                <TicketsTable projects={projects} />
+                <TicketsTable title={"Current Tickets"} projects={projects} />
                 <Charts />
             </div>)
 }

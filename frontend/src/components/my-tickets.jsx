@@ -1,5 +1,6 @@
 import TicketsTable from "./tickets-table";
 import SelectedTicket from "./selected";
+import { useState } from "react";
 
 const projects = [
     {
@@ -83,8 +84,13 @@ const projects = [
 
 
 function MyTickets() {
-    return (<div className="flex flex-col mx-5">
-                <TicketsTable projects={projects} />
+
+    const [ selectedTicket, setSelectedTicket ] = useState(projects[0])
+
+    return (<div className="flex flex-col mx-5 pb-5">
+                <SelectedTicket selectedTicket={selectedTicket} />
+                <TicketsTable title={"Current Tickets"} projects={projects} selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket} />
+                <TicketsTable title={"Past Tickets"} projects={projects} selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket} />
             </div>)
 }
 
