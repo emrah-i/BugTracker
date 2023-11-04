@@ -42,6 +42,10 @@ body {
   @apply absolute pointer-events-none top-2.5 -right-5 p-1 bg-black text-white text-xs flex z-10 bg-opacity-80 rounded-lg shadow-md;
 }
 
+.signup-input {
+  @apply w-full rounded-full text-black shadow-md py-1.5 px-3
+}
+
 .table-row-parent.active {
   @apply bg-gray-100;
 }
