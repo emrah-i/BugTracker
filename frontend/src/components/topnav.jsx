@@ -19,7 +19,7 @@ function TopNav() {
                 <p><b>User: </b>Demo Admin</p>
              </div>
              <div className="flex gap-2 text-gray-400 items-center bg-gray-100 rounded-3xl px-3 shadow">
-                <input className="rounded-xl py-1 border-gray-300 text-black bg-gray-100 opacity-85 w-40 focus:w-60 focus:outline-0 active:outline-0 border-0 custom-transition" type="text" placeholder="Search"></input>
+                <input className="rounded-xl py-1 border-gray-300 text-black bg-gray-100 opacity-85 w-40 focus:w-60 focus:outline-0 active:outline-0 border-0 placeholder:text-sm custom-transition" type="text" placeholder="Search"></input>
                 <button type="button"><i className="fa-solid fa-magnifying-glass"></i></button>
              </div>
              <div className="relative">

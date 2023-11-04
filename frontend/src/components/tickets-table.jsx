@@ -4,7 +4,7 @@ function TicketsTable(props) {
     const { projects, title, selectedTicket, setSelectedTicket } = props
 
     return (<div className="bg-main-color shadow-md rounded-lg mt-5 py-3 px-5">
-                <p className="text-xl font-semibold mb-3">{title}</p>
+                <p className="heading">{title}</p>
                 <table className="bg-main-color w-full">
                     <colgroup>
                         <col className="w-1/6"></col>

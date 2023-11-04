@@ -7,6 +7,7 @@ import Dashboard from "./components/dashboard";
 import Profile from "./components/profile";
 import MyTeam from "./components/my-team";
 import MyTickets from "./components/my-tickets";
+import NewTicket from "./components/new-ticket";
 
 function App() {
     return(<Routes>
@@ -16,6 +17,7 @@ function App() {
                     <Route index element={<Dashboard />} />
                     <Route path="my-team" element={<MyTeam />} />
                     <Route path="my-tickets" element={<MyTickets />} />
+                    <Route path="new-ticket" element={<NewTicket />} />
                     <Route path="profile" element={<Profile />} />
                 </Route>
             </Routes>)

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-size: 20px;
+  font-size: 19px;
   --main-color: white;
   --sec-color: #7371FC;
   --third-color: #BEADFF;
@@ -31,7 +31,11 @@ body {
 }
 
 .table-row-parent {
-  @apply table-rows text-xs border-gray-200 border-solid border-t-2 cursor-pointer w-full hover:bg-gray-100;
+  @apply table-rows text-sm border-gray-200 border-solid border-t-2 cursor-pointer w-full hover:bg-gray-100;
+}
+
+.heading {
+  @apply text-xl font-semibold mb-3
 }
 
 .poke {

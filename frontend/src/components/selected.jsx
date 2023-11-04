@@ -4,8 +4,8 @@ function SelectedTicket(props) {
     const { selectedTicket } = props
 
     return (<div className="bg-main-color shadow-md rounded-lg mt-5 py-3 px-5">
-                <p className="text-xl pb-3 mb-3 font-medium border-solid border-b-2 border-gray-200">Selected Ticket</p>
-                <div className="flex bg-main-color">
+                <p className="heading">Selected Ticket</p>
+                <div className="flex bg-main-color border-gray-200 border-solid border-t-2">
                     <div className="w-1/2">
                         <p className="selected-ticket"><span>Title:</span> {selectedTicket.title}</p>
                         <p className="selected-ticket"><span>Type:</span> {selectedTicket.type}</p>
@@ -36,7 +36,7 @@ function SelectedTicket(props) {
                 <div className="flex justify-evenly py-3">
                     <button type="button" className="bg-blue-500 text-white py-1 px-2 rounded-md duration-200 hover:rounded-lg hover:scale-105">Edit</button>
                     <button type="button" className="bg-red-500 text-white py-1 px-2 rounded-md duration-200 hover:rounded-lg hover:scale-105">Remove</button>
-                    <button type="button" className="bg-green-600 text-white py-1 px-2 rounded-md duration-200 hover:rounded-lg hover:scale-105">Close Ticket</button>
+                    <button type="button" className="bg-green-600 text-white py-1 px-2 rounded-md duration-200 hover:rounded-lg hover:scale-105">Change Status</button>
                 </div>
             </div>)
 }
