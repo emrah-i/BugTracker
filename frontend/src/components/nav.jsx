@@ -14,11 +14,9 @@ function Nav() {
 
         setClickable(false)
         poke.current.classList.toggle('opacity-0')
-        poke.current.classList.toggle('opacity-70')
         setTimeout(()=>{
             setClickable(true)
             poke.current.classList.toggle('opacity-0')
-            poke.current.classList.toggle('opacity-70')
         }, 750)
     }
 
@@ -26,7 +24,7 @@ function Nav() {
                 <div className="flex flex-col relative justify-center items-center cursor-pointer duration-200 hover:scale-105 hover:text-white" onClick={pokeSpider}>
                     <i className="fa-solid fa-spider text-4xl mb-1"></i> 
                     <p className="font-semibold text-xl">Bug Tracker</p>
-                    <p className="poke opacity-0 " ref={poke} >﹡poke﹡</p>
+                    <p className="poke opacity-0" ref={poke} >﹡poke﹡</p>
                 </div>
                 <div className="flex flex-col items-start gap-3 mt-10 h-full text-lg">
                     <NavLink className="nav-link" activeClassName="active" to="/"><i className="nav-icon fa-solid fa-house"></i> Dashboard</NavLink>
