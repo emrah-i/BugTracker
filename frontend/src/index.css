@@ -46,6 +46,10 @@ body {
   @apply w-full rounded-full text-black shadow-md py-1.5 px-3
 }
 
+.w-fit {
+  width: fit-content
+}
+
 .table-row-parent.active {
   @apply bg-gray-100;
 }
