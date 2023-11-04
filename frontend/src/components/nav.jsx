@@ -28,6 +28,7 @@ function Nav() {
                 </div>
                 <div className="flex flex-col items-start gap-3 mt-10 h-full text-lg">
                     <NavLink className="nav-link" activeClassName="active" to="/"><i className="nav-icon fa-solid fa-house"></i> Dashboard</NavLink>
+                    <NavLink className="nav-link" activeClassName="active" to="/notifications"><i className="nav-icon fa-solid fa-bell"></i> Notifications</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/my-team"><i className="nav-icon fa-solid fa-user-group"></i> My Team</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/my-tickets"><i className="nav-icon fa-solid fa-user-tag"></i> My Tickets</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/new-ticket"><i className="nav-icon fa-solid fa-ticket-simple"></i> New Ticket</NavLink>
