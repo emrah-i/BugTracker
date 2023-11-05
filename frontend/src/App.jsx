@@ -11,6 +11,7 @@ import NewTicket from "./components/new-ticket";
 import AllTickets from "./components/all-tickets";
 import ManageUsers from "./components/manage-users";
 import AllTeams from "./components/all-teams";
+import NewUser from "./components/new-user";
 
 function App() {
     return(<Routes>
@@ -24,6 +25,7 @@ function App() {
                     <Route path="all-tickets" element={<AllTickets />} />
                     <Route path="all-teams" element={<AllTeams />} />
                     <Route path="manage-users" element={<ManageUsers />} />
+                    <Route path="new-user" element={<NewUser />} />
                     <Route path="profile" element={<Profile />} />
                 </Route>
             </Routes>)

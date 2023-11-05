@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const devTeamMembers = [
     {
@@ -92,6 +92,131 @@ const devTeamMembers = [
 function ManageUsers() {
 
     const [ search, setSearch ] = useState(devTeamMembers)
+    const [ usersSort, setUsersSort ] = useState(null)
+    const [ selectedUser, setSelectedUser ] = useState(null)
+
+    useEffect(()=>{
+        
+        switch(usersSort) {
+            case ("name"):
+                setSearch(prevState=>{
+                    const newState = [...prevState]
+                    newState.sort((a, b) => a.name.localeCompare(b.name))
+                    return newState;
+                })
+                break;
+            case ('rev-name'):
+                setSearch(prevState=>{
+                    const newState = [...prevState]
+                    newState.sort((a, b) => b.name.localeCompare(a.name))
+                    return newState
+                })
+                break;
+            case('title'):
+                setSearch(prevState=>{
+                    const newState = [...prevState]
+                    newState.sort((a, b) => a.title.localeCompare(b.title))
+                    return newState
+                })
+                break;
+            case('rev-title'):
+                setSearch(prevState=>{
+                    const newState = [...prevState]
+                    newState.sort((a, b) => b.title.localeCompare(a.title))
+                    return newState
+                })
+                break;
+            case ('team'):
+                setSearch(prevState=>{
+                    const newState = [...prevState]
+                    newState.sort((a, b) => a.team.localeCompare(b.team))
+                    return newState
+                })
+                break;
+            case ('rev-team'):
+                setSearch(prevState=>{
+                    const newState = [...prevState]
+                    newState.sort((a, b) => b.team.localeCompare(a.team))
+                    return newState
+                })
+                break;
+            case ('email'):
+                setSearch(prevState=>{
+                    const newState = [...prevState]
+                    newState.sort((a, b) => a.email.localeCompare(b.email))
+                    return newState
+                })
+                break;
+            case ('rev-email'):
+                setSearch(prevState=>{
+                    const newState = [...prevState]
+                    newState.sort((a, b) => b.email.localeCompare(a.email))
+                    return newState
+                })
+                break;
+            default:
+                setSearch(prevState=>{
+                    const newState = [...prevState];
+                    newState.sort(() => Math.random() - 0.5);
+                    return newState;
+                })
+                return;    
+        }
+    }, [usersSort])
+
+    function changeSort(field) {
+
+        switch(field){
+            case('name'):
+                if (usersSort === 'name') {
+                    setUsersSort('rev-name')
+                }
+                else if (usersSort === 'rev-name') {
+                    setUsersSort(null)
+                }
+                else {
+                    setUsersSort('name')
+                }
+                break;
+            case ('title'):
+                if (usersSort === 'title') {
+                    setUsersSort('rev-title')
+                }
+                else if (usersSort === 'rev-title') {
+                    setUsersSort(null)
+                }
+                else {
+                    setUsersSort('title')
+                }
+                break;
+            case ('team'):
+                if (usersSort === 'team') {
+                    setUsersSort('rev-team')
+                }
+                else if (usersSort === 'rev-team') {
+                    setUsersSort(null)
+                }
+                else {
+                    setUsersSort('team')
+                }
+                break;
+            case ('email'):
+                if (usersSort === 'email') {
+                    setUsersSort('rev-email')
+                }
+                else if (usersSort === 'rev-email') {
+                    setUsersSort(null)
+                }
+                else {
+                    setUsersSort('email')
+                }
+                break;
+            default:
+                setUsersSort(null)
+                return
+        }
+    }
+
 
     return (<div className="flex flex-col gap-5 mx-5 my-5">
                 <div className="flex flex-col bg-white shadow-md py-3 px-5 rounded-lg">
@@ -110,11 +235,11 @@ function ManageUsers() {
                         </colgroup>
                         <thead className="text-sm font-thin">
                             <tr className="font-medium border-gray-200 border-solid border-t-2">
-                                <td><button className="organize-buttons" type="button">Name <i className="fa-solid fa-sort"></i></button></td>
-                                <td><button className="organize-buttons" type="button">Title <i className="fa-solid fa-sort"></i></button></td>
-                                <td><button className="organize-buttons" type="button">Team <i className="fa-solid fa-sort"></i></button></td>
-                                <td><button className="organize-buttons" type="button">Email <i className="fa-solid fa-sort"></i></button></td>
-                                <td><button className="organize-buttons" type="button">Availability <i className="fa-solid fa-sort"></i></button></td>
+                                <td><button className="organize-buttons" type="button" onClick={()=>changeSort('name')} >Name {usersSort === 'name' ? <i className="fa-solid fa-sort-up"></i> : usersSort === 'rev-name' ? <i className="fa-solid fa-sort-down"></i> :  <i className="fa-solid fa-sort"></i>}</button></td>
+                                <td><button className="organize-buttons" type="button" onClick={()=>changeSort('title')} >Title {usersSort === 'title' ? <i className="fa-solid fa-sort-up"></i> : usersSort === 'rev-title' ? <i className="fa-solid fa-sort-down"></i> :  <i className="fa-solid fa-sort"></i>}</button></td>
+                                <td><button className="organize-buttons" type="button" onClick={()=>changeSort('team')} >Team {usersSort === 'team' ? <i className="fa-solid fa-sort-up"></i> : usersSort === 'rev-team' ? <i className="fa-solid fa-sort-down"></i> :  <i className="fa-solid fa-sort"></i>}</button></td>
+                                <td><button className="organize-buttons" type="button" onClick={()=>changeSort('email')} >Email {usersSort === 'email' ? <i className="fa-solid fa-sort-up"></i> : usersSort === 'rev-email' ? <i className="fa-solid fa-sort-down"></i> :  <i className="fa-solid fa-sort"></i>}</button></td>
+                                <td><button className="organize-buttons pointer-events-none" type="button" >Availability</button></td>
                             </tr>
                         </thead>
                         <tbody>
@@ -131,6 +256,15 @@ function ManageUsers() {
                         </tbody>
                     </table> : null}
                 </div>
+                {selectedUser ? <div className="flex flex-col bg-white shadow-md py-3 px-5 rounded-lg">
+                    <p className="heading border-gray-200 border-solid border-b-2 pb-3">Selected User</p>
+                    <div>
+                        {selectedUser.name}
+                        {selectedUser.title}
+                        {selectedUser.team}
+                        {selectedUser.projects}
+                    </div>
+                </div> : null}
             </div>)
 }
 

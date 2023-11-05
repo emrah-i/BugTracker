@@ -54,7 +54,6 @@ function NewTicket() {
     return (<div className="bg-main-color mx-5 mt-5 pt-3 pb-5 px-5 shadow-md rounded-lg">
                 <p className="heading border-gray-200 border-solid border-b-2 pb-3">New Ticket</p>
                 <form className="flex flex-col gap-3 w-2/3 mx-auto">
-                    {/* Allow choice between current projects and new projects */}
                     <div className="flex justify-around">
                         <label>
                         <input type="radio" name="inputType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Project
@@ -110,7 +109,7 @@ function NewTicket() {
                         </select>
                     </div>
                     <div>
-                        <label className="mr-3">Contributers :</label>
+                        <label className="mr-3">Contributers:</label>
                         <select defaultValue={'none'} className="w-2/5 mr-3 shadow-md py-1.5 pl-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project" ref={selectContributors} >
                             <option value={'none'} disabled >Select a team member</option>
                             {fakeTeam.map((element, index)=>{
