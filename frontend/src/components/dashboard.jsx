@@ -38,7 +38,7 @@ function Dashboard() {
                 </div>
                 <div className="bg-main-color shadow-md rounded-lg mt-5 py-3 px-5">
                     <p className="heading">My Tickets</p>
-                    <table className="bg-main-color w-full">
+                    <table className="bg-main-color w-full mt-3">
                         <colgroup>
                             <col className="w-1/6"></col>
                             <col className="w-1/6"></col>

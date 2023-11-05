@@ -134,12 +134,12 @@ function ManageUsers() {
                     <p><b>Note: </b>This depicts all users under <u>your supervision</u>. This does not include every user in the organization.</p>
                 </div>
                 <div className="flex flex-col bg-white shadow-md py-3 px-5 rounded-lg">
-                    <p className="heading border-gray-200 border-solid border-b-2 pb-3">Search Users</p>
-                    <form className="flex flex-col items-center w-full">
+                    <p className="heading border-gray-200 border-solid border-b-2 pb-3 m-0">Search Users</p>
+                    <form className="flex flex-col items-center w-full my-5">
                         <input className="rounded-full py-1.5 px-3 border-gray-300 text-black bg-gray-100 opacity-85 w-1/4 focus:w-2/5 focus:outline-0 active:outline-0 border-0 custom-transition shadow" type="text" placeholder="Search users by id or name"></input>
                         <button className="mt-3 py-1 px-2 rounded-md shadow bg-third-color hover:rounded-lg duration-200" type="button">Search</button>
                     </form>
-                    {search.length !== 0 ? <table className="bg-main-color w-full mt-5">
+                    {search.length !== 0 ? <table className="bg-main-color w-full">
                         <colgroup>
                             <col className="w-1/5"></col>
                             <col className="w-1/5"></col>

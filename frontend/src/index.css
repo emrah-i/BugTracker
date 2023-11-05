@@ -39,7 +39,7 @@ body {
 }
 
 .heading {
-  @apply text-xl font-semibold mb-3
+  @apply text-xl font-semibold;
 }
 
 .poke {

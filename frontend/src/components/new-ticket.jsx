@@ -53,7 +53,7 @@ function NewTicket() {
 
     return (<div className="bg-main-color mx-5 mt-5 pt-3 pb-5 px-5 shadow-md rounded-lg">
                 <p className="heading border-gray-200 border-solid border-b-2 pb-3">New Ticket</p>
-                <form className="flex flex-col gap-5 w-2/3 mx-auto">
+                <form className="flex flex-col gap-5 w-2/3 mx-auto mt-5">
                     <div className="flex justify-around">
                         <label>
                         <input type="radio" name="inputType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Project
@@ -78,7 +78,7 @@ function NewTicket() {
                     </div>
                     <div>
                         <label className="mr-3">Type:</label>
-                        <select defaultValue={'none'} className="w-2/5 shadow-md py-1.5 pl-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project">
+                        <select defaultValue={'none'} className="w-2/5 shadow-md py-2 px-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project">
                             <option value={'none'} disabled >Select a ticket type</option>
                             <option>Bug</option>
                             <option>Feature Request</option>
@@ -88,7 +88,7 @@ function NewTicket() {
                     </div>
                     <div>
                         <label className="mr-3">Priority:</label>
-                        <select defaultValue={'none'} className="w-2/5 shadow-md py-1.5 pl-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project">
+                        <select defaultValue={'none'} className="w-2/5 shadow-md py-2 px-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project">
                             <option value={'none'} disabled >Select a priority</option>
                             <option>Low</option>
                             <option>Medium</option>
@@ -98,7 +98,7 @@ function NewTicket() {
                     </div>
                     <div>
                         <label className="mr-3">Status:</label>
-                        <select defaultValue={'none'} className="w-2/5 shadow-md py-1.5 pl-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project">
+                        <select defaultValue={'none'} className="w-2/5 shadow-md py-2 px-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project">
                             <option value={'none'} disabled >Select a status</option>
                             <option>New Ticket</option>
                             <option>In Development</option>
@@ -110,7 +110,7 @@ function NewTicket() {
                     </div>
                     <div>
                         <label className="mr-3">Contributers:</label>
-                        <select defaultValue={'none'} className="w-2/5 mr-3 shadow-md py-1.5 pl-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project" ref={selectContributors} >
+                        <select defaultValue={'none'} className="w-2/5 mr-3 shadow-md py-2 px-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project" ref={selectContributors} >
                             <option value={'none'} disabled >Select a team member</option>
                             {fakeTeam.map((element, index)=>{
                                 return <option key={index}>{element}</option>
@@ -118,11 +118,11 @@ function NewTicket() {
                         </select>
                         <button className="shadow-md bg-sec-color text-main-color rounded-lg py-1 px-2 hover:rounded-xl duration-300" type="button" onClick={addContributor}>Add</button>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    {contributors.length !== 0 && <div className="flex flex-col gap-2">
                         {contributors.map((element, index)=>{
                             return <div key={index} className="flex justify-between items-center w-fit bg-gray-100 py-1 px-2 rounded-lg shadow"><p className="pr-3">{element}</p><button type="button" onClick={()=>removeContributor(element)} ><i className="pl-3 text-red-500 text-lg fa-solid fa-xmark"></i></button></div>
                         })}
-                    </div>
+                    </div>}
                     <button className="shadow-md mx-auto w-fit bg-sec-color text-main-color rounded-lg py-1 px-2 hover:rounded-xl duration-300" type="button" onClick={addContributor}>Submit Ticket</button>
                 </form>
             </div>)
