@@ -7,7 +7,8 @@ function SelectedTicket(props) {
                 <p className="heading">Selected Ticket</p>
                 <div className="flex bg-main-color border-gray-200 border-solid border-t-2">
                     <div className="w-1/2">
-                        <p className="selected-ticket"><span>Title:</span> {selectedTicket.title}</p>
+                        <p className="selected-ticket"><span>Ticket:</span> {selectedTicket.ticket}</p>
+                        <p className="selected-ticket"><span>Project:</span> {selectedTicket.project}</p>
                         <p className="selected-ticket"><span>Type:</span> {selectedTicket.type}</p>
                         <p className="selected-ticket"><span>Priority:</span> {selectedTicket.priority}</p>
                         <p className="selected-ticket"><span>Status:</span> {selectedTicket.status}</p>
@@ -24,11 +25,10 @@ function SelectedTicket(props) {
                             }
                             })}
                         </p>
-                        <p className="selected-ticket"><span>Date Assigned:</span> {selectedTicket.date}</p>
+                        <p className="selected-ticket"><span>Date Created:</span> {selectedTicket.date}</p>
                     </div>
                     <div className="w-1/2">
                         <p className="selected-ticket"><span>Ticket Author:</span> {selectedTicket.author}</p>
-                        <p className="selected-ticket"><span>Created:</span> {selectedTicket.created}</p>
                         <p className="selected-ticket"><span>Description:</span> {selectedTicket.description}</p>
                         {/* const description = element.description.length > 60 ? element.description.slice(0, 60) + "..." : element.description */}
                     </div>

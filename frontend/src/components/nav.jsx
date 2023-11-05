@@ -29,11 +29,9 @@ function Nav() {
                 <div className="flex flex-col items-start gap-3 mt-10 h-full text-lg">
                     <NavLink className="nav-link" activeClassName="active" to="/"><i className="nav-icon fa-solid fa-house"></i> Dashboard</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/notifications"><i className="nav-icon fa-solid fa-bell"></i> Notifications</NavLink>
-                    <NavLink className="nav-link" activeClassName="active" to="/my-team"><i className="nav-icon fa-solid fa-user-group"></i> My Team</NavLink>
-                    <NavLink className="nav-link" activeClassName="active" to="/my-tickets"><i className="nav-icon fa-solid fa-user-tag"></i> My Tickets</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/new-ticket"><i className="nav-icon fa-solid fa-ticket-simple"></i> New Ticket</NavLink>
-                    <NavLink className="nav-link" activeClassName="active" to="/all-tickets"><i className="nav-icon fa-solid fa-layer-group"></i> All Tickets</NavLink>
-                    <NavLink className="nav-link" activeClassName="active" to="/all-teams"><i className="nav-icon fa-solid fa-users"></i> All Teams</NavLink>
+                    <NavLink className="nav-link" activeClassName="active" to="/open-tickets"><i className="nav-icon fa-solid fa-user-tag"></i> Open Tickets</NavLink>
+                    <NavLink className="nav-link" activeClassName="active" to="/closed-tickets"><i className="nav-icon fa-solid fa-layer-group"></i> Closed Tickets</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/new-user"><i className="fa-solid fa-user-plus"></i> New User</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/manage-users"><i className="nav-icon fa-solid fa-users-gear"></i> Manage Users</NavLink>
                     <NavLink className="nav-link mt-auto" activeClassName="active" to="/logout"><i className="nav-icon fa-solid fa-arrow-right-from-bracket"></i> Log Out</NavLink>

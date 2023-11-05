@@ -53,7 +53,7 @@ function NewTicket() {
 
     return (<div className="bg-main-color mx-5 mt-5 pt-3 pb-5 px-5 shadow-md rounded-lg">
                 <p className="heading border-gray-200 border-solid border-b-2 pb-3">New Ticket</p>
-                <form className="flex flex-col gap-3 w-2/3 mx-auto">
+                <form className="flex flex-col gap-5 w-2/3 mx-auto">
                     <div className="flex justify-around">
                         <label>
                         <input type="radio" name="inputType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Project
@@ -73,13 +73,13 @@ function NewTicket() {
                     </div>
                     <div>
                         <label>Description:</label>
-                        <textarea className="w-full shadow-md py-1.5 px-3 text-black bg-gray-100 rounded-lg" maxLength={1600} type="text" onChange={(event)=>{setDescriptionChars(event.target.value.length)}}></textarea>
-                        <p className="text-xs">Length: <span>{descriptionChars}</span> / 1600</p>
+                        <textarea className="w-full shadow-md py-1.5 px-3 text-black bg-gray-100 rounded-lg" maxLength={3200} type="text" onChange={(event)=>{setDescriptionChars(event.target.value.length)}}></textarea>
+                        <p className="text-xs">Length: <span>{descriptionChars}</span> / 3200</p>
                     </div>
                     <div>
                         <label className="mr-3">Type:</label>
                         <select defaultValue={'none'} className="w-2/5 shadow-md py-1.5 pl-3 border-r-8 border-gray-100 text-black bg-gray-100 rounded-full disabled:opacity-50" type="text" placeholder="Project">
-                            <option value={'none'} disabled >Select a project</option>
+                            <option value={'none'} disabled >Select a ticket type</option>
                             <option>Bug</option>
                             <option>Feature Request</option>
                             <option>Issue</option>
@@ -123,6 +123,7 @@ function NewTicket() {
                             return <div key={index} className="flex justify-between items-center w-fit bg-gray-100 py-1 px-2 rounded-lg shadow"><p className="pr-3">{element}</p><button type="button" onClick={()=>removeContributor(element)} ><i className="pl-3 text-red-500 text-lg fa-solid fa-xmark"></i></button></div>
                         })}
                     </div>
+                    <button className="shadow-md mx-auto w-fit bg-sec-color text-main-color rounded-lg py-1 px-2 hover:rounded-xl duration-300" type="button" onClick={addContributor}>Submit Ticket</button>
                 </form>
             </div>)
 }
