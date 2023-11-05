@@ -26,6 +26,10 @@ body {
   @apply p-3 font-medium;
 }
 
+.organize-buttons {
+  @apply w-full text-left py-1.5 px-3 bg-gray-200 rounded-sm my-0.5 flex justify-between items-center 
+}
+
 .table-rows td {
   @apply p-3;
 }

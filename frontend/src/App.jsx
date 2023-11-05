@@ -9,7 +9,7 @@ import MyTeam from "./components/my-team";
 import MyTickets from "./components/my-tickets";
 import NewTicket from "./components/new-ticket";
 import AllTickets from "./components/all-tickets";
-import AllUsers from "./components/all-users";
+import ManageUsers from "./components/manage-users";
 import AllTeams from "./components/all-teams";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
                     <Route path="new-ticket" element={<NewTicket />} />
                     <Route path="all-tickets" element={<AllTickets />} />
                     <Route path="all-teams" element={<AllTeams />} />
-                    <Route path="all-users" element={<AllUsers />} />
+                    <Route path="manage-users" element={<ManageUsers />} />
                     <Route path="profile" element={<Profile />} />
                 </Route>
             </Routes>)
