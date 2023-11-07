@@ -23,7 +23,9 @@ function App() {
                     <Route path="closed-tickets" element={<ClosedTickets />} />
                     <Route path="new-user" element={<NewUser />} />
                     <Route path="all-users" element={<AllUsers />} />
-                    <Route path="profile" element={<Profile />} />
+                    <Route path="profile/:accountId" element={<Profile />} />
+                    <Route path="settings" element={<Settings />} />
+                    <Route path="admin/settings/:accountId" element={<Profile />} />
                 </Route>
             </Routes>)
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Filters from "./filters";
+import OpenFilters from "./open-filters";
 
 const projects = [
     {
@@ -140,7 +140,7 @@ function OpenTickets() {
     return (<div className="flex flex-col mx-5 pb-5">
                 <div className="bg-main-color shadow-md rounded-lg mt-5 py-3 px-5">
                     <p className="heading border-gray-200 border-solid border-b-2 pb-3">All Open Tickets</p>
-                    <Filters />
+                    <OpenFilters />
                     <table className="bg-main-color w-full">
                         <colgroup>
                             <col className="w-fit"></col>

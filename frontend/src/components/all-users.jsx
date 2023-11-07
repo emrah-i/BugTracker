@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const devTeamMembers = [
     {
@@ -94,6 +95,7 @@ function AllUsers() {
     const [ search, setSearch ] = useState(devTeamMembers)
     const [ usersSort, setUsersSort ] = useState('none')
     const [ selectedUser, setSelectedUser ] = useState(null)
+    const navigate = useNavigate()
 
     function sortArray(array, field, reverse = false) {
         return [...array].sort((a, b) => {
@@ -158,7 +160,7 @@ function AllUsers() {
                                             <td>{element.name}</td>
                                             <td>{element.title}</td>
                                             <td>{element.email}</td>
-                                            <td className="flex justify-center"><button className="py-1 px-2 bg-third-color shadow duration-200 rounded-md hover:rounded-lg" type="button">Go to account</button></td>
+                                            <td className="flex justify-center"><button className="cursor-pointer py-1 px-2 bg-third-color shadow duration-200 rounded-md hover:rounded-lg" type="button" onClick={()=>navigate(`/profile/${index}`)}>Go to account</button></td>
                                         </tr>)
                             })}
                         </tbody>

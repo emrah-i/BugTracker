@@ -16,17 +16,6 @@ const all_types = [
     "New Project",
     ]
 
-const all_statuses = [
-    "New Ticket",
-    "Re-opened",
-    "Development",
-    "Code Review",
-    "Testing",
-    "Code Review",
-    "Deployed",
-    "Closed"
-    ]
-
 const all_priorities = [
     "Low",
     "Medium",
@@ -49,10 +38,11 @@ const all_people = [
     "Amelia Wright"
   ]
 
-function Filters() {
+function ClosedFilters() {
 
     const current = new Date()
-    const [ endDate, setEndDate ] = useState(current.toISOString().split('T')[0])
+    const [ closedEndDate, setClosedEndDate ] = useState(current.toISOString().split('T')[0])
+    const [ createdEndDate, setCreatedEndDate ] = useState(current.toISOString().split('T')[0])
     const filters = useRef(null)
 
     return(<div className="flex flex-col items-center w-full gap-3 mt-3">
@@ -81,16 +71,6 @@ function Filters() {
                             </div>
                         </div>
                         <div className="flex-grow">
-                            <p className="font-semibold mb-0.5">Status</p>
-                            <div className="flex flex-col border-2 border-gray-200 py-1 px-2 rounded h-40 overflow-y-auto">
-                            {all_statuses.map(element=>{
-                                return <div>
-                                            <input type="checkbox" id="option1" name="option1" value="Option1" />
-                                            <label for="option1"> {element}</label>
-                                        </div>})}
-                            </div>
-                        </div>
-                        <div className="flex-grow">
                             <p className="font-semibold mb-0.5">Priority</p>
                             <div className="flex flex-col border-2 border-gray-200 py-1 px-2 rounded h-40 overflow-y-auto">
                             {all_priorities.map(element=>{
@@ -111,15 +91,24 @@ function Filters() {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <label><b>Date From: </b></label>
-                        <input type="date" max={endDate} />
-                        <br/>
-                        <label><b>Date To: </b></label>
-                        <input type="date" onChange={(event)=>setEndDate(event.target.value)} max={new Date().toISOString().split('T')[0]} defaultValue={new Date().toISOString().split('T')[0]} />
+                    <div className="flex justify-between">
+                        <div>
+                            <label><b>Created After: </b></label>
+                            <input type="date" max={createdEndDate} />
+                            <br/>
+                            <label><b>Created Before: </b></label>
+                            <input type="date" onChange={(event)=>setCreatedEndDate(event.target.value)} max={new Date().toISOString().split('T')[0]} defaultValue={new Date().toISOString().split('T')[0]} />
+                        </div>
+                        <div>
+                            <label><b>Closed After: </b></label>
+                            <input type="date" max={closedEndDate} />
+                            <br/>
+                            <label><b>Closed Before: </b></label>
+                            <input type="date" onChange={(event)=>setClosedEndDate(event.target.value)} max={new Date().toISOString().split('T')[0]} defaultValue={new Date().toISOString().split('T')[0]} />
+                        </div>
                     </div>
                 </form>
             </div>)
 }
 
-export default Filters;
+export default ClosedFilters;

@@ -1,16 +1,18 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 function TopNav() {
 
     const dropdownMenu = useRef(null)
     const dropdownArrow = useRef(null)
+    const navigate = useNavigate()
 
-    function expandDropdown() {
+    function toggleDropdown() {
       dropdownArrow.current.classList.toggle('rotate-180')
       dropdownMenu.current.classList.toggle('opacity-0')
       dropdownMenu.current.classList.toggle('opacity-80')
       dropdownMenu.current.classList.toggle('h-0')
-      dropdownMenu.current.classList.toggle('h-32')
+      dropdownMenu.current.classList.toggle('h-24')
       dropdownMenu.current.classList.toggle('pointer-events-none')
     }
 
@@ -23,12 +25,11 @@ function TopNav() {
                 <button type="button"><i className="text-sm fa-solid fa-magnifying-glass"></i></button>
              </div>
              <div className="relative">
-                <button type="button" className="flex gap-2 items-center"  onClick={expandDropdown}><i className="flex items-center pointer-events-none text-xl bg-third-color text-black h-min rounded-full py-0.5 px-2 fa-solid fa-user"></i><i className="flex items-center pointer-events-none fa-solid fa-angle-down duration-300" ref={dropdownArrow}></i></button>
+                <button type="button" className="flex gap-2 items-center"  onClick={toggleDropdown}><i className="flex items-center pointer-events-none text-xl bg-third-color text-black h-min rounded-full py-0.5 px-2 fa-solid fa-user"></i><i className="flex items-center pointer-events-none fa-solid fa-angle-down duration-300" ref={dropdownArrow}></i></button>
                 <ul className="flex flex-col justify-between items-start text-sm absolute bg-black text-white rounded p-3 right-0 list-none pointer-events-none h-0 opacity-0 duration-300" ref={dropdownMenu}>
-                    <p><a href="/profile">Profile</a></p>
-                    <p><a href="/notifications">Notifications</a></p>
-                    <p><a href="/inbox">Inbox</a></p>
-                    <p><a href="/settings">Settings</a></p>
+                    <p className="cursor-pointer select-none" onClick={()=>{navigate("/profile/0"); toggleDropdown();}}>Profile</p>
+                    <p className="cursor-pointer select-none" onClick={()=>{navigate("/notifications"); toggleDropdown();}}>Notifications</p>
+                    <p className="cursor-pointer select-none" onClick={()=>{navigate("/settings"); toggleDropdown();}}>Settings</p>
                 </ul>
              </div>
            </div>)
