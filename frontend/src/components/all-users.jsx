@@ -138,17 +138,17 @@ function AllUsers() {
                     </form>
                     {search.length !== 0 ? <table className="bg-main-color w-full">
                         <colgroup>
-                            <col className="w-1/3"></col>
-                            <col className="w-1/3"></col>
-                            <col className="w-1/3"></col>
-                            <col className="w-1/3"></col>
+                            <col className="w-1/4"></col>
+                            <col className="w-1/4"></col>
+                            <col className="w-1/4"></col>
+                            <col className="w-2/12"></col>
                         </colgroup>
                         <thead className="text-sm font-thin">
                             <tr className="font-medium border-gray-200 border-solid border-t-2">
                                 <td><button className="organize-buttons" type="button" onClick={()=>changeSort('name')} >Name {usersSort === 'name' ? <i className="fa-solid fa-sort-up"></i> : usersSort === 'rev-name' ? <i className="fa-solid fa-sort-down"></i> :  <i className="fa-solid fa-sort"></i>}</button></td>
                                 <td><button className="organize-buttons" type="button" onClick={()=>changeSort('title')} >Role {usersSort === 'title' ? <i className="fa-solid fa-sort-up"></i> : usersSort === 'rev-title' ? <i className="fa-solid fa-sort-down"></i> :  <i className="fa-solid fa-sort"></i>}</button></td>
                                 <td><button className="organize-buttons" type="button" onClick={()=>changeSort('email')} >Email {usersSort === 'email' ? <i className="fa-solid fa-sort-up"></i> : usersSort === 'rev-email' ? <i className="fa-solid fa-sort-down"></i> :  <i className="fa-solid fa-sort"></i>}</button></td>
-                                <td><button className="organize-buttons" type="button" onClick={()=>changeSort('email')} >Actions</button></td>
+                                <td><button className="organize-buttons" type="button" onClick={()=>changeSort('email')} >Account</button></td>
                             </tr>
                         </thead>
                         <tbody>
@@ -158,10 +158,7 @@ function AllUsers() {
                                             <td>{element.name}</td>
                                             <td>{element.title}</td>
                                             <td>{element.email}</td>
-                                            <td className="flex justify-center items-center">
-                                              <button className="w-fit" type="button"><i className="fa-solid fa-ellipsis-vertical"></i></button>
-
-                                            </td>
+                                            <td className="flex justify-center"><button className="py-1 px-2 bg-third-color shadow duration-200 rounded-md hover:rounded-lg" type="button">Go to account</button></td>
                                         </tr>)
                             })}
                         </tbody>
