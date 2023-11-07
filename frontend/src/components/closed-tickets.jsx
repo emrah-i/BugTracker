@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Filters from "./filters";
 
 const projects = [
     {
@@ -96,7 +97,7 @@ const projects = [
 function ClosedTickets() {
 
     const [ openTicketsSort, setOpenTicketsSort ] = useState('none')
-    const [ tickets, setTickets ] = useState(projects)
+    const [ tickets, setTickets ] = useState(projects.slice(0, 2))
     const [ selectedTicket, setSelectedTicket ] = useState(null)
 
     function sortArray(array, field, reverse = false) {
@@ -119,7 +120,7 @@ function ClosedTickets() {
                 sortedArray = sortArray(tickets, sortField, openTicketsSort.startsWith('rev-'));
                 break;
             default:
-                sortedArray = [...tickets].sort(() => Math.random() - 0.5);
+                sortedArray = projects.slice(0, 2);
                 break;
         }
 
@@ -139,10 +140,7 @@ function ClosedTickets() {
     return (<div className="flex flex-col mx-5 pb-5">
                 <div className="bg-main-color shadow-md rounded-lg mt-5 py-3 px-5">
                     <p className="heading border-gray-200 border-solid border-b-2 pb-3">All Closed Tickets</p>
-                    <form className="flex flex-col items-center w-full my-5">
-                        <input className="rounded-full py-1.5 px-3 border-gray-300 text-black bg-gray-100 opacity-85 w-1/4 focus:w-2/5 focus:outline-0 active:outline-0 border-0 custom-transition shadow" type="text" placeholder="Search tickets by id, project, type..."></input>
-                        <button className="mt-3 py-1 px-2 rounded-md shadow bg-third-color hover:rounded-lg duration-200" type="button">Search</button>
-                    </form>
+                    <Filters />
                     <table className="bg-main-color w-full">
                         <colgroup>
                             <col className="w-fit"></col>

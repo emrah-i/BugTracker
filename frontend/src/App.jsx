@@ -5,11 +5,11 @@ import Home from "./components/home";
 import Dashboard from "./components/dashboard";
 import Profile from "./components/profile";
 import NewTicket from "./components/new-ticket";
-import ManageUsers from "./components/manage-users";
 import NewUser from "./components/new-user";
 import OpenTickets from "./components/open-tickets";
 import Notifications from "./components/notifications";
 import ClosedTickets from "./components/closed-tickets";
+import AllUsers from './components/all-users';
 
 function App() {
     return(<Routes>
@@ -22,7 +22,7 @@ function App() {
                     <Route path="open-tickets" element={<OpenTickets />} />
                     <Route path="closed-tickets" element={<ClosedTickets />} />
                     <Route path="new-user" element={<NewUser />} />
-                    <Route path="manage-users" element={<ManageUsers />} />
+                    <Route path="all-users" element={<AllUsers />} />
                     <Route path="profile" element={<Profile />} />
                 </Route>
             </Routes>)
