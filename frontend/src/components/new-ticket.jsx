@@ -51,7 +51,7 @@ function NewTicket() {
         });
     }
 
-    return (<div className="bg-main-color mx-5 mt-5 pt-3 pb-5 px-5 shadow-md rounded-lg">
+    return (<div className="bg-main-color mx-5 my-5 pt-3 pb-5 px-5 shadow-md rounded-lg">
                 <p className="heading border-gray-200 border-solid border-b-2 pb-3">New Ticket</p>
                 <form className="flex flex-col gap-5 w-2/3 mx-auto mt-5">
                     <div className="flex justify-around">
