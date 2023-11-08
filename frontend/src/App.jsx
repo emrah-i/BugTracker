@@ -11,6 +11,7 @@ import Notifications from "./components/notifications";
 import ClosedTickets from "./components/closed-tickets";
 import AllUsers from './components/all-users';
 import Settings from './components/settings';
+import ChangePassword from './components/change-password';
 
 function App() {
     return(<Routes>
@@ -26,6 +27,7 @@ function App() {
                     <Route path="all-users" element={<AllUsers />} />
                     <Route path="profile/:accountId" element={<Profile />} />
                     <Route path="settings" element={<Settings />} />
+                    <Route path="settings/change-password" element={<ChangePassword />} />
                     <Route path="admin/settings/:accountId" element={<Profile />} />
                 </Route>
             </Routes>)
