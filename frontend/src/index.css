@@ -67,6 +67,10 @@ body {
   width: fit-content
 }
 
+.h-fit {
+  height: fit-content
+}
+
 .table-row-parent.active {
   @apply bg-gray-100;
 }
