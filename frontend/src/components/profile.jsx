@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const user = {
     name: "Isabella Brown",
@@ -34,6 +34,7 @@ const projects = [
 
 function Profile() {
     const { accountId } = useParams();
+    const navigate = useNavigate()
 
     return (<div className="flex flex-col gap-5 mx-5 my-5">
                 <div className="flex flex-col gap-1 bg-white shadow-md py-3 px-5 rounded-lg">
@@ -44,7 +45,7 @@ function Profile() {
                     <p><b>Role: </b>{user.title}</p>
                     <p><b>Email: </b>{user.email}</p>
                     <p><b>Available Hours: </b>{user.availableHours}</p>
-                    <button className="flex items-center gap-2 w-fit bg-gray-500 text-white shadow rounded-md py-1 px-2 duration-200 hover:rounded-lg" type="button"><i className="fa-solid fa-gear"></i> Settings</button>
+                    <button className="flex items-center gap-2 w-fit bg-gray-500 text-white shadow rounded-md py-1 px-2 duration-200 hover:rounded-lg" type="button" onClick={()=>{navigate('/settings')}} ><i className="fa-solid fa-gear"></i> Settings</button>
                 </div>
                 <div className="bg-main-color shadow-md rounded-lg py-3 px-5">
                     <p className="heading">{user.name.split(' ')[0]}'s Tickets</p>

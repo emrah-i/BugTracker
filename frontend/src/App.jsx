@@ -10,6 +10,7 @@ import OpenTickets from "./components/open-tickets";
 import Notifications from "./components/notifications";
 import ClosedTickets from "./components/closed-tickets";
 import AllUsers from './components/all-users';
+import Settings from './components/settings';
 
 function App() {
     return(<Routes>
