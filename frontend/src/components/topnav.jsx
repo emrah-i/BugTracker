@@ -28,7 +28,10 @@ function TopNav() {
                 <button type="button" className="flex gap-2 items-center"  onClick={toggleDropdown}><i className="flex items-center pointer-events-none text-xl bg-third-color text-black h-min rounded-full py-0.5 px-2 fa-solid fa-user"></i><i className="flex items-center pointer-events-none fa-solid fa-angle-down duration-300" ref={dropdownArrow}></i></button>
                 <ul className="flex flex-col justify-evenly items-start text-sm absolute bg-black text-white rounded px-3 right-0 list-none pointer-events-none h-0 opacity-0 duration-300 z-20" ref={dropdownMenu}>
                     <p className="cursor-pointer select-none" onClick={()=>{navigate("/profile/0"); toggleDropdown();}}>Profile</p>
-                    <p className="cursor-pointer select-none" onClick={()=>{navigate("/notifications"); toggleDropdown();}}>Notifications</p>
+                    <p className="relative cursor-pointer select-none" onClick={()=>{navigate("/notifications"); toggleDropdown();}}>
+                        <span>Notifications</span>
+                     <i className="absolute -top-1.5 -right-1.5 text-xs text-red-500 fa-solid fa-circle"></i>
+                     </p>
                     <p className="cursor-pointer select-none" onClick={()=>{navigate("/settings"); toggleDropdown();}}>Settings</p>
                 </ul>
              </div>

@@ -23,7 +23,7 @@ body {
 
 .table-heading td {
   text-align: left;
-  @apply p-3 font-medium;
+  @apply font-medium;
 }
 
 .organize-buttons {

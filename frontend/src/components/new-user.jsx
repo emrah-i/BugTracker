@@ -15,11 +15,11 @@ function NewUser() {
     }
 
     return (<div className="bg-main-color mx-5 mt-5 pt-3 pb-5 px-5 shadow-md rounded-lg">
-                <p className="heading border-gray-200 border-solid border-b-2 pb-3">New Ticket</p>
+                <p className="heading border-gray-200 border-solid border-b-2 pb-3">New User</p>
                 <form className="flex flex-col gap-5 w-2/3 mx-auto mt-5">
                     <div className="flex justify-around">
                         <label>
-                        <input type="radio" name="inputRoleType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Role
+                        <input className="active:ring-0" type="radio" name="inputRoleType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Role
                         </label>
                         <label className="text-left">
                         <input type="radio" name="inputRoleType" value="dropdown" onClick={()=>setInputOption('dropdown')} /> Existing Role

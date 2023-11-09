@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Charts from "./charts";
 
 const projects = [
@@ -28,6 +28,8 @@ const projects = [
 
 function Dashboard() {
 
+    const navigate = useNavigate()
+
     return (<div className="flex flex-col mx-5">
                 <div className="flex justify-between gap-5 mt-5">
                     <div className="dashboard-box"><p className="text-4xl font-medium">15</p> <p>All Tickets</p></div>
@@ -49,18 +51,18 @@ function Dashboard() {
                         </colgroup>
                         <thead className="text-sm font-thin">
                             <tr className="table-heading border-gray-200 border-solid border-t-2">
-                                <td>Ticket</td>
-                                <td>Type</td>
-                                <td>Status</td>
-                                <td>Priority</td>
-                                <td>Contributers</td>
-                                <td>Date Assigned</td>
+                                <td><button className="organize-buttons pointer-events-none" type="button">Ticket </button></td>
+                                <td><button className="organize-buttons pointer-events-none" type="button">Type </button></td>
+                                <td><button className="organize-buttons pointer-events-none" type="button">Status </button></td>
+                                <td><button className="organize-buttons pointer-events-none" type="button">Priority </button></td>
+                                <td><button className="organize-buttons pointer-events-none" type="button">Contributors </button></td>
+                                <td><button className="organize-buttons pointer-events-none" type="button">Date </button></td>
                             </tr>
                         </thead>
                         <tbody>
                             {projects.map((element, index, array)=>{
                                 let parent = index === array.length - 1 ? "border-b-2" : null;
-                                return (<tr key={index} className={`table-row-parent ${parent} relative duration-300`} >
+                                return (<tr key={index} className={`table-row-parent ${parent} relative duration-300`} onClick={()=>navigate(`/ticket/${index}`)} >
                                             <td>{element.title}</td>
                                             <td>{element.type}</td>
                                             <td>{element.status}</td>

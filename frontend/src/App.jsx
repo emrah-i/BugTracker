@@ -12,6 +12,7 @@ import ClosedTickets from "./components/closed-tickets";
 import AllUsers from './components/all-users';
 import Settings from './components/settings';
 import ChangePassword from './components/change-password';
+import Ticket from './components/ticket';
 
 function App() {
     return(<Routes>
@@ -26,6 +27,7 @@ function App() {
                     <Route path="new-user" element={<NewUser />} />
                     <Route path="all-users" element={<AllUsers />} />
                     <Route path="profile/:accountId" element={<Profile />} />
+                    <Route path="ticket/:ticketId" element={<Ticket />} />
                     <Route path="settings" element={<Settings />} />
                     <Route path="settings/change-password" element={<ChangePassword />} />
                     <Route path="admin/settings/:accountId" element={<Profile />} />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ClosedFilters from "./closed-filters";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
     {
@@ -100,6 +101,7 @@ function ClosedTickets() {
     const [ openTicketsSort, setOpenTicketsSort ] = useState('none')
     const [ tickets, setTickets ] = useState(projects.slice(0, 2))
     const [ selectedTicket, setSelectedTicket ] = useState(null)
+    const navigate = useNavigate()
 
     function sortArray(array, field, reverse = false) {
         return [...array].sort((a, b) => {
@@ -167,7 +169,7 @@ function ClosedTickets() {
                             {tickets.map((element, index, array)=>{
                                 let parent = index === array.length - 1 ? "border-b-2" : null;
                                 parent = element === selectedTicket ? parent + " active" : parent;
-                                return (<tr key={index} className={`table-row-parent ${parent} relative duration-300`} onClick={()=>{setSelectedTicket(tickets[index])}} >
+                                return (<tr key={index} className={`table-row-parent ${parent} relative duration-300`} onClick={()=>navigate(`/ticket/${index}`)} >
                                             <td>{element.ticket}</td>
                                             <td>{element.project}</td>
                                             <td>{element.type}</td>

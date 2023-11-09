@@ -48,7 +48,7 @@ function Settings(props) {
                 </div>
                 <div className={`fixed top-0 left-0 flex justify-center items-center w-screen h-screen z-10 ${deleteView ? null : 'hidden'}`}>  
                     <div className="absolute bg-black opacity-50 w-full h-full">&nbsp;</div>
-                    <div className="flex flex-col gap-2 justify-evenly items-center bg-white rounded-md shadow-md py-3 px-6 w-fit h-1/5 z-30">
+                    <div className="flex flex-col gap-3 justify-evenly items-center bg-white rounded-md shadow-md py-3 px-6 w-fit h-fit z-30">
                         <p className="text-center">If you would like to delete this user, please type:<br/> "Delete {user.name}"</p>
                         <input className="w-1/2 shadow-md py-1.5 px-3 text-black bg-gray-100 rounded-full disabled:opacity-50 placeholder:text-gray-500" type="text" placeholder="Type the phrase" />
                         <div className="flex gap-3">
