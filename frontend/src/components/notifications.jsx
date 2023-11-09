@@ -26,7 +26,7 @@ function Notifications() {
     } 
             
     return (<div className="relative flex flex-col gap-5 mx-5 my-5">
-                <div className="flex flex-col gap-2 bg-white shadow-md py-3 px-5 rounded-lg">
+                <div className="flex flex-col bg-white shadow-md py-3 px-5 rounded-lg">
                     {notifications.map((element, index)=>{
 
                         const date = new Date(element.date)
@@ -43,7 +43,7 @@ function Notifications() {
                             time = "years"
                         }
 
-                        return (<div key={index} className={`flex items-center border-y-2 border-gray-200 gap-5 px-5 py-3 h-fit duration-150 cursor-pointer ${element.viewed ? "hover:bg-gray-100" : "bg-gray-100"}`} onClick={()=>toggleSeen(index, element.viewed)} >
+                        return (<div key={index} className={`flex items-center border-b-2 ${index === 0 ? 'border-t-2' : null} border-gray-200 gap-5 px-5 py-3 h-fit duration-150 cursor-pointer ${element.viewed ? "hover:bg-gray-100" : "bg-gray-100"}`} onClick={()=>toggleSeen(index, element.viewed)} >
                                     <i className={`text-gray-400 text-xs ${element.viewed ? "fa-regular" : "fa-solid text-red-500"} fa-circle`}></i>
                                     <div className="flex flex-col justify-between gap-1.5 h-fit w-full pointer-event-none">
                                         <p className="m-0 w-2/3">{element.title}</p>

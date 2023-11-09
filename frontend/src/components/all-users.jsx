@@ -131,14 +131,18 @@ function AllUsers() {
         });
     }
 
+    function filterSearch(val) {
+      const keywords = val.toLowerCase()
+      setSearch(devTeamMembers.filter((element)=>element.name.toLowerCase().includes(keywords) || element.title.toLowerCase().includes(keywords) || element.email.toLowerCase().includes(keywords)))
+    }
+
     return (<div className="flex flex-col gap-5 mx-5 my-5">
                 <div className="flex flex-col bg-white shadow-md py-3 px-5 rounded-lg">
                     <p className="heading border-gray-200 border-solid border-b-2 pb-3 m-0">Search Users</p>
-                    <form className="flex flex-col items-center w-full my-5">
-                        <input className="rounded-full py-1.5 px-3 border-gray-300 text-black bg-gray-100 opacity-85 w-1/4 focus:w-1/3 focus:outline-0 active:outline-0 border-0 custom-transition shadow" type="text" placeholder="Search users by id or name"></input>
-                        <button className="mt-3 py-1 px-2 rounded-md shadow bg-third-color hover:rounded-lg duration-200" type="button">Search</button>
+                    <form className="flex flex-col items-center w-full my-5" onSubmit={(e)=>e.preventDefault()}>
+                        <input className="rounded-full py-1.5 px-3 border-gray-300 text-black bg-gray-100 opacity-85 w-1/4 focus:w-1/3 focus:outline-0 active:outline-0 border-0 custom-transition shadow" type="text" placeholder="Search by name, role, or email" onChange={(e)=>filterSearch(e.target.value)}></input>
                     </form>
-                    {search.length !== 0 ? <table className="bg-main-color w-full">
+                    <table className="bg-main-color w-full">
                         <colgroup>
                             <col className="w-1/4"></col>
                             <col className="w-1/4"></col>
@@ -154,7 +158,7 @@ function AllUsers() {
                             </tr>
                         </thead>
                         <tbody>
-                            {search.map((element, index, array)=>{
+                            {search.length !== 0 ? search.map((element, index, array)=>{
                                 let parent = index === array.length - 1 ? "border-b-2" : null;
                                 return (<tr key={index} className={`table-row-parent ${parent} duration-300`} >
                                             <td>{element.name}</td>
@@ -162,9 +166,9 @@ function AllUsers() {
                                             <td>{element.email}</td>
                                             <td className="flex justify-center"><button className="cursor-pointer py-1 px-2 bg-third-color shadow duration-200 rounded-md hover:rounded-lg" type="button" onClick={()=>navigate(`/profile/${index}`)}>Go to account</button></td>
                                         </tr>)
-                            })}
+                            }) : <tr className='table-row-parent duration-300'><td className="font-medium" colSpan={4}>No users</td></tr>}
                         </tbody>
-                    </table> : null}
+                    </table>
                 </div>
                 {selectedUser ? <div className="flex flex-col bg-white shadow-md py-3 px-5 rounded-lg">
                     <p className="heading border-gray-200 border-solid border-b-2 pb-3">Selected User</p>

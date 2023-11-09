@@ -20,13 +20,13 @@ function Nav() {
         }, 750)
     }
 
-    return(<nav className="flex flex-col items-center w-1/5 h-screen bg-third-color text-black py-5 top-0 sticky">
+    return(<nav className="flex flex-col items-center w-fit h-screen bg-third-color text-black py-5 px-8 top-0 sticky">
                 <div className="flex flex-col relative justify-center items-center cursor-pointer duration-200 hover:scale-105 hover:text-white" onClick={pokeSpider}>
                     <i className="fa-solid fa-spider text-4xl mb-1"></i> 
                     <p className="font-semibold text-xl">Bug Tracker</p>
                     <p className="poke opacity-0" ref={poke} >﹡poke﹡</p>
                 </div>
-                <div className="flex flex-col items-start gap-3 mt-10 h-full text-lg">
+                <div className="flex flex-col items-start gap-3 mt-10 h-full w-max text-lg">
                     <NavLink className="nav-link" activeClassName="active" to="/"><i className="nav-icon fa-solid fa-house"></i> Dashboard</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/notifications"><i className="nav-icon fa-solid fa-bell"></i> Notifications</NavLink>
                     <NavLink className="nav-link" activeClassName="active" to="/new-ticket"><i className="nav-icon fa-solid fa-ticket-simple"></i> New Ticket</NavLink>

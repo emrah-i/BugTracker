@@ -32,10 +32,10 @@ function Dashboard() {
 
     return (<div className="flex flex-col mx-5">
                 <div className="flex justify-between gap-5 mt-5">
-                    <div className="dashboard-box"><p className="text-4xl font-medium">15</p> <p>All Tickets</p></div>
-                    <div className="dashboard-box"><p className="text-4xl font-medium">5</p> <p>Currently Open Tickets</p></div>
-                    <div className="dashboard-box"><p className="text-4xl font-medium">10</p> <p>Closed Tickets</p></div>
-                    <div className="dashboard-box"><p className="text-4xl font-medium">2</p> <p>Your Tickets</p></div>
+                    <div className="dashboard-box"><p className="text-4xl font-medium">5</p> <p>All Open Tickets</p></div>
+                    <div className="dashboard-box"><p className="text-4xl font-medium">2</p> <p>Your Open Tickets</p></div>
+                    <div className="dashboard-box"><p className="text-4xl font-medium">10</p> <p>All Closed Tickets</p></div>
+                    <div className="dashboard-box"><p className="text-4xl font-medium">15</p> <p>Your Closed Tickets</p></div>
                     <div className="dashboard-box"><p className="text-4xl font-medium">1</p> <p>Notifications</p></div>
                 </div>
                 <div className="bg-main-color shadow-md rounded-lg mt-5 py-3 px-5">
