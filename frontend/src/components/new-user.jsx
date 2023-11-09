@@ -18,11 +18,11 @@ function NewUser() {
                 <p className="heading border-gray-200 border-solid border-b-2 pb-3">New User</p>
                 <form className="flex flex-col gap-5 w-2/3 mx-auto mt-5">
                     <div className="flex justify-around">
-                        <label>
-                        <input className="active:ring-0" type="radio" name="inputRoleType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Role
+                        <label className="flex gap-1 items-center">
+                        <input className="h-4 w-4" type="radio" name="inputRoleType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Role
                         </label>
-                        <label className="text-left">
-                        <input type="radio" name="inputRoleType" value="dropdown" onClick={()=>setInputOption('dropdown')} /> Existing Role
+                        <label className="flex gap-1 items-center">
+                        <input className="h-4 w-4" type="radio" name="inputRoleType" value="dropdown" onClick={()=>setInputOption('dropdown')} /> Existing Role
                         </label>
                     </div>
                     <div className="flex justify-around">

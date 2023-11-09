@@ -55,11 +55,11 @@ function NewTicket() {
                 <p className="heading border-gray-200 border-solid border-b-2 pb-3">New Ticket</p>
                 <form className="flex flex-col gap-5 w-2/3 mx-auto mt-5">
                     <div className="flex justify-around">
-                        <label>
-                        <input type="radio" name="inputType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Project
+                        <label className="flex gap-1 items-center">
+                        <input className="h-4 w-4" type="radio" name="inputType" value="text" defaultChecked onClick={()=>setInputOption('text')} /> New Project
                         </label>
-                        <label className="text-left">
-                        <input type="radio" name="inputType" value="dropdown" onClick={()=>setInputOption('dropdown')} /> Existing Projects
+                        <label className="flex gap-1 items-center">
+                        <input className="h-4 w-4" type="radio" name="inputType" value="dropdown" onClick={()=>setInputOption('dropdown')} /> Existing Projects
                         </label>
                     </div>
                     <div className="flex justify-around">
