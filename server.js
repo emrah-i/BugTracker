@@ -8,6 +8,17 @@ import compression from "compression";
 import express from "express";
 import morgan from "morgan";
 import sourceMapSupport from "source-map-support";
+import Sequelize from "sequelize"
+import dotenv from "dotenv";
+import { fileURLToPath, dirname } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const dotenvPath = path.join(__dirname, '.env')
+
+dotenv.config({ path: dotenvPath });
+
+const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
 
 sourceMapSupport.install();
 installGlobals();
