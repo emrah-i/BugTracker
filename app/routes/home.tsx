@@ -1,6 +1,8 @@
-import Nav from "./nav";
-import { Outlet } from "react-router-dom";
-import TopNav from "./topnav";
+import Nav from "../components/nav";
+import TopNav from "../components/topnav";
+import { Outlet } from "@remix-run/react";
+import React from "react";
+
 
 function Home() {
 

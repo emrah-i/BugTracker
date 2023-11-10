@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Charts from "./charts";
+import Charts from "../components/charts"
+import React from "react";
 
 const projects = [
     {

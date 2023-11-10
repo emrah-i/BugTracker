@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import React from "react";
 
 const user = {
     name: "Isabella Brown",

@@ -1,4 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend, PieChart, Pie, Cell } from 'recharts';
+import React from 'react';
 
 const data = [
                 { name: 'New Tickets', Tickets: 4},
@@ -87,7 +88,7 @@ function Charts() {
                         }
                     </Pie>
                     <Tooltip contentStyle={{ fontSize: '14px', borderRadius: '.5rem' }} />
-                    <Legend iconSize={16} wrapperStyle={{ fontSize: '.7rem', marginLeft: "1rem", marginTop: "1rem" }} align='center' verticalAlign='center' layout='horizontal' />
+                    <Legend iconSize={16} wrapperStyle={{ fontSize: '.7rem', marginLeft: "1rem", marginTop: "1rem" }} align='center' layout='horizontal' />
                     </PieChart>
                 </div>
             </div>)

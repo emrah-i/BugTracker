@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const notificationsArray = [
     { title: "You were added to Project Alpha", date: "2023-11-08T10:00:00Z", viewed: false },
@@ -49,7 +49,7 @@ function Notifications() {
                                         <p className="m-0 w-2/3">{element.title}</p>
                                         <div className="flex justify-between">
                                             <p className="text-sm text-gray-400 ">{days}+ {time} ago</p>
-                                            <p className="text-sm text-gray-400 ">({date.toDateString('en-us')}, {date.toLocaleTimeString('en-us', {hour: "2-digit", minute: '2-digit'})})</p>
+                                            <p className="text-sm text-gray-400 ">({date.toDateString()}, {date.toLocaleTimeString('en-us', {hour: "2-digit", minute: '2-digit'})})</p>
                                         </div>
                                     </div>
                                 </div>)
